@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js" type="module" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Life</title>
+</head>
+<body>
+    <div class="controls">
+        <div class="parameter">
+            <label for="initConfig">Initial State</label> 
+            <select name="initConfig" id="initConfig"> 
+                <option value="random">Random</option> 
+                <option value="bands">Bands</option> 
+            </select>
+        </div>
+        <div class="parameter">
+            <label for="initVelocity">Reference Velocity</label>
+            <div class="vectorInputContainer" name="initVelocity" id="initVelocity">
+                <input type="number" class="vectorInput" name="initVelocityX" id="initVelocityX" value="0.0">
+                <input type="number" class="vectorInput" name="initVelocityY" id="initVelocityY" value="0.0">
+            </div>
+        </div>
+        <div class="parameter">
+            <label for="numParticles">Num Particles</label>
+            <input type="number" name="numParticles" id="numParticles" value="500">
+        </div>
+        <div class="parameter">
+            <label for="numClasses">Num Classes</label>
+            <input type="number" name="numClasses" id="numClasses" value="3" min="1" max="6">
+        </div>
+        <div class="parameter">
+            <label>Interactions</label>    
+            <div class="interaction" id="interactionMatrix">
+            </div>
+            <div class="subParam">
+                <button id="randoBtn">Randomize</button>
+                <button id="identBtn">Identity</button>
+            </div>
+        </div>
+        <div class="parameter">
+            <button id="resetBtn">Reset</button>
+            <button id="playPauseBtn">Play</button>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <canvas id="screen"></canvas>
+    </div>
+</body>
+</html>
